@@ -1,2 +1,4 @@
 rootProject.name = 'brlibs'
-include 'brlibs-commons', 'brlibs-certificate'
+include 'brlibs-commons',
+        'brlibs-certificate',
+        'brlibs-documents'
