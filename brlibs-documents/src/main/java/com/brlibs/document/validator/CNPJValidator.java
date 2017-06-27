@@ -3,6 +3,8 @@ package com.brlibs.document.validator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.brlibs.common.Strings;
+
 import br.com.caelum.stella.validation.InvalidStateException;
 
 public class CNPJValidator extends br.com.caelum.stella.validation.CNPJValidator {
@@ -63,14 +65,10 @@ public class CNPJValidator extends br.com.caelum.stella.validation.CNPJValidator
             return null;
         }
         if ( ! isFormatted() ) {
-            cnpj = removeNonNumerics( cnpj );
+            cnpj = Strings.removeNonNumerics( cnpj );
         }
         cnpj = addLeftZeros( cnpj );
         return cnpj;
-    }
-
-    protected String removeNonNumerics ( String cnpj ) {
-        return cnpj.replaceAll( "[^\\d]" , "" );
     }
 
     protected String addLeftZeros ( String cnpj ) {
