@@ -33,3 +33,6 @@ hs_err_pid*
 # Gradle
 */build
 .gradle
+
+### IntelliJ IDEA ###
+.idea
